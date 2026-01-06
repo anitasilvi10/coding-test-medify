@@ -34,9 +34,9 @@ class CategoryController extends Controller
     public function formView($method, $id = 0)
     {
         if ($method == 'new') {
-            $item = new Category();
+            $item = [];
         } else {
-            $item = Category::findOrFail($id);
+            $item = Category::find($id);
         }
         $data['item'] = $item;
         $data['method'] = $method;

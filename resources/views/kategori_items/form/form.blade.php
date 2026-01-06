@@ -1,4 +1,4 @@
-<form method="POST" action="{{ url('kategori-items/form/' . $method . ($method === 'edit' ? '/' . $item->id : '')) }}">
+<form method="POST">
     @csrf
     @if ($method == 'edit')
         <div class="form-group">
